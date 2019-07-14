@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+    <a href="index.php">Home</a>
+    <br/>
+    
+    <br/>
+
+        <form ... onsubmit="return checkForm(this);" action = "add.php" method="POST" name="form1">
+                <div class="container">            
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+                  <hr>
+
+                  <br>
+                  <label for="group"><b>Select Your Group</b></label>   <!--need to add js for different displays for groups-->
+                  <input type = "checkbox" name = "student" value="student" checked>Student
+                  <input type = "checkbox" name = "administrator" value="administrator">Administrative Staff
+                  <input type = "checkbox" name = "tacadamic" value="tacadamic">Temporary Acadamic Staff
+                  <input type = "checkbox" name = "acadamic" value="acadamic">Acadamic Staff 
+
+                    </br>
+                <br>
+                  <label for="fname"><b>First Name</b></label>
+                  <input type="text" placeholder="Enter First Name" name="fname" required>
+                </br>
+                <br>
+                <label for="sname"><b>Second Name</b></label>
+                <input type="text" placeholder="Enter Second Name" name="sname" required>
+              </br>
+              <br>
+                  <label for="pname"><b>Preferred Name</b></label>
+                  <input type="text" placeholder="Enter Preferred Name" name="pname" required>
+                </br>
+                
+                <br>
+                <label for="bday"><b>Full Date of Birth</b></label>
+                <input type="date" placeholder="Enter Date of Birth" name="bday" required>
+              </br>
+              <br>
+                  <label for="oemail"><b>Official Email Address</b></label>
+                  <input type="text" placeholder="Enter Official Email" name="oemail" required>
+                </br>
+
+
+                <br>
+                  <label for="pemail"><b>Personal Email Address</b></label>
+                  <input type="text" placeholder="Enter Personal Email" name="pemail" required>
+                </br>
+                <br>
+
+                <label for="mobile"><b>Mobile Number</b></label>
+                <input type="text" placeholder="Enter Mobile Number" name="mobile" required>
+              </br>
+
+              <br>
+
+              <label for="fblink"><b>Facebook Profile Link</b></label>
+              <input type="text" placeholder="Enter Facebook Profile Link" name="fblink" required>
+            </br>
+            <br>
+
+            <label for="designation"><b>Designation</b></label>
+            <input type="text" placeholder="Enter Designation" name="designation" required>
+          </br>
+          <br>
+
+          <label for="nic"><b>NIC Number</b></label>
+          <input type="text" placeholder="Enter NIC Number" name="nic" required>
+        </br> 
+
+        <br>
+        <label for="index"><b>Select Your Index</b>   IM / </label>   <!--need to add js for different indexes-->
+        <select name = "indexyear">
+              <option value="2014">2014</option>
+              <option value="2015">2015</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+            </select>
+            <input type="text" placeholder="Index" name="index" required>
+          </br>
+
+          <br>
+          <label for="food"><b>Select Your Food Preferrence</b></label> 
+          <select name = "food">
+                <option value="veg">Veg</option>
+                <option value="Nveg">Non Veg</option>
+              </select>
+
+            </br>
+
+            <br>
+
+          <label for="note"><b>Notes</b></label>
+          <input type="text"  placeholder="Notes" name="note" required>
+        </br>
+
+<br>
+
+        <label for="index"><b>Select Your Role</b></label>   <!--need to add js for different roles-->
+        <input type = "checkbox" name = "nuser" value="nuser" checked>Normal User
+        <input type = "checkbox" name = "organiser" value="organiser">Organiser
+        <input type = "checkbox" name = "admin" value="admin">Admin
+
+
+
+        </br>
+                <br>
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+               </br>
+            <br>
+                  <label for="psw-repeat"><b>Repeat Password</b></label>
+                  <input type="password" placeholder="Repeat Password" name="psw2" required>
+                </br> 
+                <br>
+                  <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                  </label>
+                </br>
+                  <div class="clearfix">
+                    <button type="button" name = "cancel" class="cancelbtn">Cancel</button>
+                    <button type="submit" name = "submit" class="signupbtn">Sign Up</button>
+                  </div>
+                </div>
+              </form> 
+
+<script type="text/javascript">
+
+
+function checkForm(form)
+  {
+    
+
+    if(form.nic.value != "") {
+      if(form.nic.value.length == 10){
+        alert("Error: NIC must contain at least 10 characters!");
+        form.nic.focus();
+        return false;
+      }
+     
+      re = /[0-9]{3,}/;
+      if(!re.test(form.index.value)) {
+        alert("Error: Index must contain 3 numbers (0-9)!");
+        form.index.focus();
+        return false;
+      }
+      re = /[@,.]/;
+      if(!re.test(form.oemail.value)) {
+        alert("Error: Invalid Official Email");
+        form.oemail.focus();
+        return false;
+      }
+
+      re = /[@,.]/;
+      if(!re.test(form.pemail.value)) {
+        alert("Error: Invalid Preferred Email");
+        form.pemail.focus();
+        return false;
+      }
+
+      re = /[0-9]{10,}/;
+      if(!re.test(form.mobile.value) && form.mobile.value.length == 10){
+        alert("Error: Mobile Number must contain 10 numbers (0-9)!");
+        form.mobile.focus();
+        return false;
+      }
+      if(psw.value != psw2.value){
+
+        alert("Error: Password Does Not Match! Check Your Password")
+        form.psw2.focus();
+        return false;
+      }
+
+     
+
+    } else {
+      alert("");
+      return true;
+    }
+
+    
+  }
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</html>
