@@ -133,7 +133,7 @@ function checkForm(form)
     
 
     if(form.nic.value != "") {
-      if(form.nic.value.length == 10){
+      if(form.nic.value.length < 10){
         alert("Error: NIC must contain at least 10 characters!");
         form.nic.focus();
         return false;
