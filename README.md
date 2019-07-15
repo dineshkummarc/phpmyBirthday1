@@ -2,10 +2,10 @@
 Birthday Management Application For Department of Industrial Management University of Kelaniya Sri Lanka
 
 ## Run The Application
-
-1. Import bdaydb.sql file to mysql
-2. Change mysql username and password in config.php
-3. Run under localhost ( used LAMP with phpmyadmin)
+1. Create Database named bdaydb
+2. Import bdaydb.sql file to mysql bdaydb database using phpmyadmin
+3. Change mysql username and password in config.php
+4. Run under localhost ( used LAMP with phpmyadmin)
 
 ## Functions
 
