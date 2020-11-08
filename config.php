@@ -10,8 +10,8 @@ $conn = mysql_connect("localhost","root","root")
 
 $databaseHost = 'localhost';
 $databaseName = 'bdaydb';
-$databaseUsername = 'rishan';
-$databasePassword = 'eluwa123';
+$databaseUsername = 'root';
+$databasePassword = '';
 
 $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); 
  
