@@ -68,7 +68,7 @@ while($res = mysqli_fetch_array($result))
     $gstudent = $res['student'];
     $gtacadamic = $res['tempacstaff'];
     $gadministrator  = $res['adminstaff'];
-    $gacadamic = $res['acadamicstaff'];
+    $gacadamic = $res['acstaff'];
     
 
 }
@@ -153,16 +153,16 @@ while($res = mysqli_fetch_array($result))
             </tr>
             <tr> 
 				<td>Role</td>
-                <td><input type="checkbox" name="organiser" value="<?php echo $rorganiser;?>">Organiser</td>
-                <td><input type="checkbox" name="nuser" value="<?php echo $rnuser;?>">Normal User</td>
-                <td><input type="checkbox" name="admin" value="<?php echo $radmin;?>">admin</td>
+                <td><input type="radio" name="role" value="<?php echo $rorganiser;?>" <?php if($rorganiser == '1'){echo 'checked';}?>>Organiser</td>
+                <td><input type="radio" name="role" value="<?php echo $rnuser;?>" <?php if($rnuser == '1'){echo 'checked';}?>>Normal User</td>
+                <td><input type="radio" name="role" value="<?php echo $radmin;?>" <?php if($radmin == '1'){echo 'checked';}?>>admin</td>
             </tr>
             <tr> 
 				<td>Group</td>
-                <td><input type="checkbox" name="student" value="<?php echo $gstudent;?>">Student</td>
-                <td><input type="checkbox" name="administrator" value="<?php echo $gadministrator;?>">Administrative Staff</td>
-                <td><input type="checkbox" name="tacadamic" value="<?php echo $gtacadamic;?>">Temporary Acadamic Staff</td>
-                <td><input type="checkbox" name="acadamic" value="<?php echo $gacadamic;?>">Acadamic Staff</td>
+                <td><input type="radio" name="authgroup" value="<?php echo $gstudent;?>" <?php if($gstudent == '1'){echo 'checked';}?>>Student</td>
+                <td><input type="radio" name="authgroup" value="<?php echo $gadministrator;?>" <?php if($gadministrator == '1'){echo 'checked';}?>>Administrative Staff</td>
+                <td><input type="radio" name="authgroup" value="<?php echo $gtacadamic;?>" <?php if($gtacadamic == '1'){echo 'checked';}?>>Temporary Acadamic Staff</td>
+                <td><input type="radio" name="authgroup" value="<?php echo $gacadamic;?>" <?php if($gacadamic == '1'){echo 'checked';}?>>Acadamic Staff</td>
             </tr>
 
 

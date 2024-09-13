@@ -14,10 +14,10 @@
 
                   <br>
                   <label for="group"><b>Select Your Group</b></label>   <!--need to add js for different displays for groups-->
-                  <input type = "checkbox" name = "student" value="student" checked>Student
-                  <input type = "checkbox" name = "administrator" value="administrator">Administrative Staff
-                  <input type = "checkbox" name = "tacadamic" value="tacadamic">Temporary Acadamic Staff
-                  <input type = "checkbox" name = "acadamic" value="acadamic">Acadamic Staff 
+                  <input type = "radio" name = "authgroup" onclick="displayValue(this)" value="student" checked>Student
+                  <input type = "radio" name = "authgroup" onclick="displayValue(this)" value="administrator">Administrative Staff
+                  <input type = "radio" name = "authgroup" onclick="displayValue(this)" value="tacadamic">Temporary Acadamic Staff
+                  <input type = "radio" name = "authgroup" onclick="displayValue(this)" value="acadamic">Acadamic Staff 
 
                     </br>
                 <br>
@@ -98,9 +98,9 @@
 <br>
 
         <label for="index"><b>Select Your Role</b></label>   <!--need to add js for different roles-->
-        <input type = "checkbox" name = "nuser" value="nuser" checked>Normal User
-        <input type = "checkbox" name = "organiser" value="organiser">Organiser
-        <input type = "checkbox" name = "admin" value="admin">Admin
+        <input type = "radio" name = "role" onclick="displayValue(this)" value="nuser" checked>Normal User
+        <input type = "radio" name = "role" onclick="displayValue(this)" value="organiser">Organiser
+        <input type = "radio" name = "role" onclick="displayValue(this)" value="admin">Admin
 
 
 
@@ -182,7 +182,9 @@ function checkForm(form)
     
   }
 
-
+function displayValue(elem){
+	alert(elem.value);
+}
 
 
 
